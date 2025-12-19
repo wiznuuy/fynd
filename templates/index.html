@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYND - Find Your Nearest Desire</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Hero Section with Navigation -->
+    <div class="hero">
+        <img src="/static/images/hero-bg.jpg" alt="Fashion" class="hero-image" 
+             onerror="this.style.background='linear-gradient(135deg, #8B7355 0%, #A0926D 50%, #C4B99A 100%)'; this.style.height='100%';">
+        
+        <nav class="navbar" style="position: absolute; top: 0; left: 0; right: 0; z-index: 10;">
+            <div></div>
+            <div class="nav-links nav-links-white">
+                <a href="/about">About</a>
+                <a href="/wishlist">Wishlist</a>
+                <a href="/mypage">MyPage</a>
+            </div>
+        </nav>
+        
+        <div class="hero-overlay">
+            <h1 class="hero-logo">FynD</h1>
+            <p class="hero-tagline">find your nearest desire</p>
+        </div>
+    </div>
+    
+    <!-- Search Section -->
+    <div class="landing-content">
+        <h2 class="greeting">
+            <span id="greeting">Good Afternoon</span><br>
+            What are you looking for today?
+        </h2>
+        
+        <form id="search-form" class="search-container">
+            <input 
+                type="text" 
+                id="search-input" 
+                class="search-input" 
+                placeholder="input text prompt*"
+                required
+            >
+            
+            <div class="search-actions">
+                <div style="display: flex; align-items: center;">
+                    <button type="button" id="add-image-btn" class="add-image-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="16"/>
+                            <line x1="8" y1="12" x2="16" y2="12"/>
+                        </svg>
+                        add image
+                    </button>
+                    <input type="file" id="image-input" class="hidden-input" accept="image/*">
+                    <img id="image-preview" class="image-preview" alt="Preview">
+                </div>
+                
+                <button type="submit" class="submit-btn">Get Recommendation !</button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+    
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

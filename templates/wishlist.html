@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYND - Wishlist</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Navigation -->
+        <nav class="navbar with-bg">
+            <a href="/" class="logo">FynD</a>
+            <div class="nav-links">
+                <a href="/about">About</a>
+                <a href="/wishlist">Wishlist</a>
+                <a href="/mypage">MyPage</a>
+            </div>
+        </nav>
+        
+        <!-- Content -->
+        <div class="content-section">
+            <h1 class="page-title">
+                Love your style!<br>
+                Keep going, you can never be overdressed.
+            </h1>
+            
+            <!-- Empty State -->
+            <div id="wishlist-empty" class="wishlist-empty" style="display: none;">
+                아직 위시리스트가 비어있습니다.<br>
+                마음에 드는 상품을 추가해보세요!
+            </div>
+            
+            <!-- Wishlist Grid -->
+            <div id="wishlist-grid" class="products-grid"></div>
+        </div>
+    </div>
+    
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+    
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
